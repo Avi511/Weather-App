@@ -1,13 +1,131 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  background-image: url(./assets/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 25px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  padding: 40px 60px;
+  color: #fff;
+  max-width: 400px;
+  width: 90%;
+  transition: all 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
+}
+
+.top {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.lacation p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.temp h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+.description p {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  gap: 10px;
+}
+
+.bottom div {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 15px 10px;
+  border-radius: 20px;
+  flex: 1;
+  text-align: center;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.bottom div:hover {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.1));
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+.bottom p,
+.wind {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.bottom .feels::before {
+  content: '🌡️';
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+
+.bottom .humidity::before {
+  content: '💧';
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+
+.bottom .wind::before {
+  content: '🌬️';
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+
+
+@media (max-width: 480px) {
+  .temp h1 {
+    font-size: 3rem;
+  }
+
+  .container {
+    padding: 30px 25px;
+  }
+
+  .bottom div {
+    width: 28%;
+    padding: 12px;
+  }
 }
